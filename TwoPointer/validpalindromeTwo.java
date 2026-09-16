@@ -1,17 +1,38 @@
 package TwoPointer;
 
 public class validpalindromeTwo {
-    public  static  boolean isflag(String s){
-        String s1=s;
-        for(int i=0;i<s.length();i++){
-            return false;
-        }
-        return true;
-    }
-    public static void main(String[] args) {
-        String s= "abc";
+    public static boolean isPalindrome(String s){
         int n=s.length();
-        System.out.println(isflag(s));
+        int l=0;
+        int r=n-1;
+        while(l<r){
+            if(s.charAt(l)!=s.charAt(r)){
+                return palindrome(s,l+1,r)||
+                palindrome(s,l,r-1);
+            }
+            l++;
+            r--;
+        }
+        palindrome(s, l, r);
+        return  true;
+    }
+    public  static boolean palindrome(String s,int l,int r){
+        while(l<r){
+            if(s.charAt(l)!=s.charAt(r)){
+                return false;
+            }
+            l++;
+            r--;
+        }
+        return  true;
+    }
+   
+    
+    public static void main(String[] args) {
+        String s= "abcaf";
+        System.out.println(isPalindrome(s));
+       
+      
 
 
     }
