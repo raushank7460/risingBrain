@@ -30,7 +30,7 @@ public class climbstairs {
     
 // }
 
-public int climbStairs(int n) {
+public int solve(int n) {
 
         if (n <= 1) {
             return 1;
