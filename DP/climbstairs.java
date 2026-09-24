@@ -5,7 +5,8 @@ package DP;
 public class climbstairs {
     public static void main(String[] args) {
         int n=3;
-         System.out.println(solve(n));
+          System.out.println(solve(n));
+        
 
     }
     // using recursion method
@@ -30,7 +31,7 @@ public class climbstairs {
     
 // }
 
-public int solve(int n) {
+public static  int solve(int n) {
 
         if (n <= 1) {
             return 1;
